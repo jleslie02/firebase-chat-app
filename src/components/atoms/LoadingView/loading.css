@@ -1,0 +1,19 @@
+@keyframes changeTopHeight {
+  from {
+    height: 15px;
+  }
+
+  to {
+    height: 50px;
+  }
+}
+
+@keyframes changeBottomHeight {
+  from {
+    height: 50px;
+  }
+
+  to {
+    height: 15px;
+  }
+}

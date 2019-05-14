@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'Noto Sans', sans-serif;
+  src: url('https://fonts.googleapis.com/css?family=Noto+Sans) format("opentype")');
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'exan';
+  src: url('../assets/fonts/Exan-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+@font-face {
+	font-family: 'anurati';
+	src: url("../assets/fonts/Anurati-Regular.otf") format("opentype");
+}
+
+@font-face {
+	font-family: 'Beaufort for LOL';
+	src: url("../assets/fonts/BeaufortforLOL-Regular.woff") format("opentype");
+}
+
+@font-face {
+	font-family: 'Beaufort for LOL bold';
+	src: url("../assets/fonts/BeaufortforLOL-Bold.woff") format("opentype");
+}
+
+@font-face {
+	font-family: 'lol custom';
+	src: url("../assets/fonts/custom_font_bold.woff2") format("opentype");
+}
+

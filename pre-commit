@@ -1,0 +1,48 @@
+#!/bin/bash
+#!/bin/sh
+#
+# pre-commit hook that runs eslint on your changes files
+#
+# Install it as follows:
+#
+#   cp bin/pre-commit .git/hooks/pre-commit
+#
+
+PATH=$PATH:/usr/local/bin:/usr/local/sbin:/opt/local/bin
+
+# Find the repository root
+repo_root="$(dirname $0)/../../"
+
+# Get the list of changed js and jsx files
+changed_js_files=`git diff --cached --name-only --diff-filter=ACM | grep -e ".js$"`
+
+void_elements_pattern="<(area|base|br|col|command|embed|hr|img|input|keygen|link|meta|param|source|track|wbr)([^<>]*)><\/\1>"
+empty_elements_pattern="<([A-Za-z0-9]+)([ ]?[^<]*[ ]?)\/>"
+js_status=0
+debug_status=1
+
+# If there are any changed js or jsx files, run eslint on them
+if [ "${changed_js_files}" != "" ]; then
+  # Run eslint
+  ${repo_root}/node_modules/.bin/eslint -c ${repo_root}/.eslintrc ${changed_js_files}
+  js_status=$?
+
+  # See if any js or jsx files have a console.debug|log statement in them
+  grep -nHE --color=always "console\.log" $changed_js_files
+  debug_status=$?
+fi
+
+if [ $js_status -ne 0 ]; then
+  echo "eslint check failed. To view lint errors, run in the terminal npm run lint"
+fi
+
+if [ $debug_status -eq 0 ]; then
+  echo "One of the changed js files has a console in it."
+fi
+
+if [ $js_status -ne 0 -o $debug_status -eq 0 ]; then
+  echo "Commit with 'git commit --no-verify' to skip these checks and potentially anger your team.\n"
+  exit 1
+fi
+
+exit 0

@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'lato-light';
+  src: url('../assets/fonts/lato/lato-light.eot');
+  src: url('../assets/fonts/lato/lato-light.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/lato/lato-light.woff') format('woff'),
+       url('../assets/fonts/lato/lato-light.woff2') format('woff2'),
+       url('../assets/fonts/lato/lato-light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lato-regular';
+  src: url('../assets/fonts/lato/lato-regular.eot');
+  src: url('../assets/fonts/lato/lato-regular.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/lato/lato-regular.woff') format('woff'),
+       url('../assets/fonts/lato/lato-regular.woff2') format('woff2'),
+       url('../assets/fonts/lato/lato-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lato-bold';
+  src: url('../assets/fonts/lato/lato-bold.eot');
+  src: url('../assets/fonts/lato/lato-bold.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/lato/lato-bold.woff') format('woff'),
+       url('../assets/fonts/lato/lato-bold.woff2') format('woff2'),
+       url('../assets/fonts/lato/lato-bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
