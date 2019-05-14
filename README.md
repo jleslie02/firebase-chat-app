@@ -1,4 +1,4 @@
-# xeejx
+# xeejx Project - Firebase Chat App
 A chat application using firebase and react channels.
 You will have to define your own database however in firebase to have it working.
 Here is a link of the demo.
