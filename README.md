@@ -5,6 +5,9 @@ Here is a link of the demo.
 
 http://lol.jeex.io.s3-website-us-east-1.amazonaws.com/
 
+User: newuser
+password: adminme
+
 After filling up everything in the config file, run
 ```npm install``` then
 ```npm start```
